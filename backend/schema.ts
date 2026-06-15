@@ -11,3 +11,10 @@ export const loginSchema = z.object({
     username : z.string().min(3) , 
     password : z.string().min(6) 
 })
+
+export const incomeSchema = z.object({
+    amount : z.number() , 
+    category : z.string() , 
+    date : z.coerce.date() , 
+    remarks : z.string() 
+})
